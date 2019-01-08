@@ -196,8 +196,10 @@ blockquote::before{
 }
 .clients-subheading{
     text-align:center;
+    margin-bottom:50px;
 }
 .rounded{
+    margin-top:40px;
     border-radius: 50%; 
     border:solid 5px white;
 }
@@ -212,6 +214,7 @@ blockquote::before{
     font-size:150%;
     font-weight:lighter;
     font-style:italic;
+    position: relative;
 }
 .client-quote p {
     margin-bottom:0px;
@@ -221,3 +224,44 @@ blockquote::before{
     font-size:75%;
     color:rgb(119,147,197);
 }
+.client-quote::before,
+.client-quote::after{
+    content:"";
+    display:block;
+    width:0px;
+    height:0px;
+    position:absolute;
+}
+.client-quote::before{
+    top:50%;
+    left:-30px;
+    margin-top:-15px;
+    border:15px solid transparent;
+    border-right:15px solid rgb(235,235,235);
+}
+.client-quote::after{
+    top:50%;
+    left:-26px;
+    margin-top:-13px;
+    border:13px solid transparent;
+    border-right: 13px solid white;
+    }
+
+.client-quote-left::before{
+    top:50%;
+    left:auto;
+    right:-30px;
+    margin-top:-15px;
+    border:15px solid transparent;
+    border-left:15px solid rgb(235,235,235);
+}
+.client-quote-left::after{
+    top:50%;
+    left:auto;
+    right:-26px;
+    margin-top:-13px;
+    border:13px solid transparent;
+    border-left: 13px solid white;
+    }
+
+ 
